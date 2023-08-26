@@ -7,8 +7,8 @@
   text-align: center;
   background-color: beige;
   height: 55vh;
-  padding: 1rem;
-  border-radius: 0.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
   margin-top: 23vh;
 }
 body {
@@ -21,6 +21,16 @@ body {
 }
 input {
   width: 10vw;
+}
+#message{
+    color: white;
+    background-color: red;
+    border-radius: 0.2rem;
+    opacity: 0.8;
+    word-spacing: 0.2rem;
+    width: fit-content;
+    margin: auto;
+    padding: 0.1rem 0.5rem;
 }
 #check {
   margin: 0.5rem;

@@ -21,10 +21,11 @@ checkBtn.addEventListener("click", function() {
     // }
     if (bill>0) {
         if (cash >= bill) {
+            showMessage("Thank You Visit Again!", true);
             var amountToReturn = cash - bill;
             calculateChange(amountToReturn);
         }else {
-            showMessage("Cash Amount should be greater than or equal to Bill Amount");
+            showMessage("Do you want to wash plates? Cash Amount should be greater than or equal to Bill Amount!");
         }
 
     } else {
@@ -36,9 +37,13 @@ checkBtn.addEventListener("click", function() {
     }
 })
 
-function showMessage(msg) {
+function showMessage(msg, flag = false) {
     message.style.display = "block";
     message.innerText = msg;
+    message.style.backgroundColor = "red";
+    if (flag) {
+        message.style.backgroundColor = "green";
+    }
 }
 
 function calculateChange(amountToReturn) {
